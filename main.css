@@ -1,0 +1,42 @@
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+.accordion-container {
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+.accordion-header {
+    font-size: 18px;
+    font-weight: bold;
+}
+.accordion-text {
+    font-size: 16px;
+    border-top: 1px solid #ccc;
+    color: black;
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.accordion-text::before {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    transition: all 0.3s ease-out;
+}
+.accordion-text.open::before {
+    transform: rotate(180deg);
+    top: 10%;
+    right: 4px;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    text-align: justify;
+    transition: max-height 0.3s ease-out;
+    margin: 0 10px 10px;
+}
